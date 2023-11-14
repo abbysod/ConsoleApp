@@ -113,15 +113,15 @@ function financialAnalysis(finance) {
 
   for (var i = 0; i < totalMonths; i++) {
     currentMonth = finance[i]
-    totalProfitLoss += currentMonth[1];
+    totalProfitLoss = totalProfitLoss + currentMonth[1];
     if (i > 0) {
       var changes = currentMonth - finance;
 
       //Find the changes
       //Store the max and min values in the changes array.
-      // var changeIncrease = Math.max(change)
-      // var changeDecrease = Math.min(change)
-
+       var changeIncrease = Math.max(changes);
+       var changeDecrease = Math.min(changes);
+       console.log(changeIncrease);
       // Additional example with a money variable
       //Output the result
     }
